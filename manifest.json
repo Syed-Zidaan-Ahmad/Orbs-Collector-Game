@@ -1,0 +1,22 @@
+{
+  "name": "Orbs Collector Game by Zidaan",
+  "short_name": "Orbs Collector",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#00eeee",
+  "description": "Collect the orbs and receive points in this classic arcade game.",
+  "icons": [
+    {
+      "src": "Orbs-Collector-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Orbs-Collector-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
