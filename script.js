@@ -67,10 +67,11 @@ let isGameOverScreen = false;
 // Input Variables
 let moveLeft = false;
 let moveRight = false;
-// Text Messages for Instructions
-const message = "Lets test your reflexes";
-const message2 = "The more orbs you collect,\n the more points you get";
-const message3 = "Use Arrow Keys or On-Screen Buttons to Move Left and Right";
+// Text Messages
+const message = "Test Your Reflexes!";
+const message2 = "Catch Orbs, Score Points";
+const message3 = "PC: Arrows | Phone: Buttons";
+const message4 = "A game by Zidaan"; 
 // Beep Sound Function
 function playBeep() {
     try {
@@ -162,21 +163,27 @@ function draw() {
         ctx.fillText("Score: " + score, gameWidth / 2, 50);
         let centerX = gameWidth / 2;
         let centerY = gameHeight / 2 - 40;  
+        // Top 3 messages in White
+        ctx.fillStyle = "#ffffff";
         ctx.font = "36px Arial"; 
         ctx.fillText(message, centerX, centerY);
         ctx.fillText(message2, centerX, centerY + 40);
         ctx.fillText(message3, centerX, centerY + 80);
+        ctx.fillStyle = "#0ef"; 
+        ctx.font = "bold 28px Arial"; 
+        ctx.fillText(message4, centerX, centerY + 130); 
     } else if (isGameOverScreen) {
         ctx.fillStyle = "#ffffff";
         ctx.font = "36px Arial";
         ctx.textAlign = "center";
         let centerX = gameWidth / 2;
         let centerY = gameHeight / 2;
-        const finalMessage = "Game Over !!! You got " + score + " Blessings";
+        const finalMessage = "Game Over !!! You got " + score + " Orbs";
         const a = "I Hope You Enjoyed This Game";
         const z = "A Game Developed by :-> Zidaan";
         ctx.fillText(finalMessage, centerX, centerY);
         ctx.fillText(a, centerX, centerY + 50);
+        ctx.fillStyle = "#0ef";
         ctx.fillText(z, centerX, centerY + 100);
     }
 }
