@@ -203,4 +203,31 @@ if ('serviceWorker' in navigator) {
             .catch(err => console.error('Service Worker Registration Failed!', err));
     });
 }
+// Security features with taunts
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+  alert("😏 No right click! Thought you were smart, huh?");
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === "F12" || e.keyCode === 123) {
+    e.preventDefault();
+    alert("😈 F12? Trying to act clever? Nope!");
+  }
+  if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+    e.preventDefault();
+    alert("😜 Inspect shortcut? Busted!");
+  }
+  if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+    e.preventDefault();
+    alert("😂 Console peek? Dream on!");
+  }
+  if (e.ctrlKey && e.key === 'u') {
+    e.preventDefault();
+    alert("😅 View source? Not happening, buddy!");
+  }
+  if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+    e.preventDefault();
+    alert("😏 Element inspector? You wish!");
+  }
+});
 // End of Program
