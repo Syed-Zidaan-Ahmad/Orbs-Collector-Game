@@ -203,11 +203,7 @@ if ('serviceWorker' in navigator) {
             .catch(err => console.error('Service Worker Registration Failed!', err));
     });
 }
-// Security features with taunts
-document.addEventListener('contextmenu', function (e) {
-  e.preventDefault();
-  alert("😏 No right click! Thought you were smart, huh?");
-});
+// Security features with taunts
 document.addEventListener('keydown', function (e) {
   if (e.key === "F12" || e.keyCode === 123) {
     e.preventDefault();
